@@ -14,10 +14,16 @@ const getMatrix = ()=>{
         }
         
     }
-    console.log(values)
+    console.log( "input matrix = " ,values)
+    return values
 }
 
 
 const calculate = ()=>{
-    getMatrix()
+
+    const ThresholdValue = parseFloat(document.getElementById('ThresholdValue').value)
+    console.log(ThresholdValue)
+    const inputMatrix = getMatrix()
+
+    // console.log(inputMatrix)
 }
