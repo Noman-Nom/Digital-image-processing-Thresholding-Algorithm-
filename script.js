@@ -27,8 +27,12 @@ const calculate = ()=>{
 
     // console.log(inputMatrix)
 
-    inputMatrix.map((rows)=>(
+   const resultMatrix =  inputMatrix.map((rows)=>(
                 rows.map((value)=>{
+
+                    console.log(`${value} / 255  = ${value/255}`)
+                    value = value/255;
+                   
 
                     if (value <= ThresholdValue) {
                         value = 0
@@ -37,9 +41,11 @@ const calculate = ()=>{
                         value = 1
                     }
 
-                    console.log("calculated result = " , value)
+                    // console.log("calculated result = " , value)
                     return value
 
                 })
     ))
+
+    console.log( "Result Matrix",resultMatrix)
 }
