@@ -30,8 +30,9 @@ const calculate = ()=>{
    const resultMatrix =  inputMatrix.map((rows)=>(
                 rows.map((value)=>{
 
-                    console.log(`${value} / 255  = ${value/255}`)
-                    value = value/255;
+                    // console.log(`${value} / 255  = ${value/255}`)
+                    value = (value/255).toFixed(2);
+                    console.log(value)
                    
 
                     if (value <= ThresholdValue) {
