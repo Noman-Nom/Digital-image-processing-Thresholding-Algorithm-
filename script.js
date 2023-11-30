@@ -26,4 +26,20 @@ const calculate = ()=>{
     const inputMatrix = getMatrix()
 
     // console.log(inputMatrix)
+
+    inputMatrix.map((rows)=>(
+                rows.map((value)=>{
+
+                    if (value <= ThresholdValue) {
+                        value = 0
+                        
+                    }else{
+                        value = 1
+                    }
+
+                    console.log("calculated result = " , value)
+                    return value
+
+                })
+    ))
 }
