@@ -31,7 +31,7 @@ const calculate = ()=>{
                 rows.map((value)=>{
 
                     // console.log(`${value} / 255  = ${value/255}`)
-                    value = (value/255).toFixed(2);
+                    // value = (value/255).toFixed(2);
                     console.log(value)
                    
 
@@ -49,4 +49,30 @@ const calculate = ()=>{
     ))
 
     console.log( "Result Matrix",resultMatrix)
+
+    dispalyMatrix('resultMatrix' , resultMatrix)
+}
+
+const dispalyMatrix = (resultMatrix , result)=>{
+
+    const finalMatrix = document.getElementById(resultMatrix)
+    console.log(finalMatrix)
+
+
+    while(finalMatrix.rows.length>0){
+        finalMatrix.deleteRow(0)
+    }
+
+    for (let i = 0; i < result.length; i++) {
+        const row = finalMatrix.insertRow(i)
+
+        for (let j = 0; j < result[i].length; j++) {
+            const col = row.insertCell(j)
+
+            col.appendChild(document.createTextNode(result[i][j]))
+            
+        }
+        
+    }
+
 }
